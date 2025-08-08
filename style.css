@@ -1,0 +1,301 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Fira Code', monospace; */
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+body {
+  position: relative;
+  min-height: 80vh;
+  background: radial-gradient(ellipse at top left, #1a1a40, #0f0f2b);
+  color: white;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+/* Image overlays (grid, glow, particles, etc.) */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: 
+    url("hero.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, 500px, 500px;
+  background-position: center, top left;
+  pointer-events: none; /* So it doesn't block clicks */
+}
+
+
+
+.container {
+  max-width: 1600px; /* or 100%, or 90vw based on your preference */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  padding-top: 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.left-section {
+  flex: 0 0 50%;
+  padding: 2rem;
+  padding-top: 4 rem;
+  max-width: none;
+  width: 100%;
+
+}
+
+.pink {
+  white-space: nowrap;
+      font-size: 3.5rem; 
+
+}
+
+
+/* .right-section {
+  flex: 0 0 50%;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: flex-end;
+ 
+} */
+
+.right-section img.profile-image {
+  max-width: 70%;
+  height: auto;
+  border-radius: 20px; /* optional, if you want rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* optional shadow */
+  object-fit: cover;
+  object-position: top; /* crops from top */
+}
+
+
+
+/* Left section */
+.left-section h1 {
+  font-size: 2.6rem;
+  line-height: 1.5;
+
+}
+
+.pink {
+  color: #ff4fa2;
+}
+
+.green {
+  color: #00ffa1;
+}
+
+/* Social icons */
+.social-icons {
+  margin: 2rem 0;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #ff4fa2;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.btn.contact {
+  border: 1px solid #ff4fa2;
+  color: white;
+}
+
+.btn.contact:hover {
+  background-color: #ff4fa2;
+}
+
+.btn.resume {
+  background: linear-gradient(45deg, #ff4fa2, #7f5eff);
+  color: white;
+}
+
+.btn.resume:hover {
+  opacity: 0.9;
+}
+
+
+
+/* Right section */
+/* Code Card Styling */
+/* .code-card {
+  position: relative;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 30px auto;
+  max-width: none;
+  width: 90%;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  color: #eee;
+  background: linear-gradient(to bottom, #111132, #0c0c2a);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 245, 160, 0.05);
+  overflow-x: auto;
+}
+
+.code-card::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow:
+    20px 0 0 #ffbd2e,
+    40px 0 0 #27c93f;
+}
+
+.code-card::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.code-card code {
+  display: block;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+  padding-top: 30px;
+    padding-left: 30px;
+  line-height: 0.7;
+} */
+
+/* Syntax Highlighting */
+/* .keyword { color: #ff4db2; }
+.string  { color: #ffd700; }
+.value   { color: #ffa07a; }
+.function{ color: #00f5a0; }
+.property{ color: #87cefa; }
+.operator{ color: #ffcc99; } */
+
+/* === Header Styles === */
+.header {
+  width: 100%;
+  padding: 2rem 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: none; /* translucent dark bg */
+  backdrop-filter: blur(10px); /* glass effect */
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0);
+}
+
+/* Navigation Container */
+.nav-container {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: hsl(332, 100%, 65%);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ffa1;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: linear-gradient(to right, #ff4fa2, #7f5eff);
+  transition: 0.4s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.ham-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.ham-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .ham-menu {
+    display: flex;
+  }
+}
