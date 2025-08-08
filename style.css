@@ -24,10 +24,11 @@ body::before {
   inset: 0;
   z-index: 0;
   background-image: 
-    url("hero.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: cover, 500px, 500px;
-  background-position: center, top left;
+    url("assets/images/hero.svg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
   pointer-events: none; /* So it doesn't block clicks */
 }
 
@@ -71,15 +72,13 @@ body::before {
 } */
 
 .right-section img.profile-image {
-  max-width: 70%;
+  max-width: 60%;
   height: auto;
   border-radius: 20px; /* optional, if you want rounded corners */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* optional shadow */
   object-fit: cover;
   object-position: top; /* crops from top */
 }
-
-
 
 /* Left section */
 .left-section h1 {
