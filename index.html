@@ -1,92 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bharathi Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bharathi - Portfolio</title>
 
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <div class="frame">
+    <!-- NAV -->
+    <header class="nav">
+      <a class="logo" href="#">
+        <span class="hex">
+          <span class="hex__border"></span>
+          <span class="hex__letter">B</span>
+        </span>
+      </a>
 
-     <header class="header hidden">
-      <div class="nav-container">
-        <div class="logo">
-          <a href="index.html"> Bharathi  </a>
-        </div>
-
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-
-<!-- <nav> -->
-  <div class="ham-menu" id="ham-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-<!-- </nav> -->
-
-      </div>
+      <nav class="nav__menu">
+        <ol>
+          <li><a href="#about"><span class="num">01.</span> About</a></li>
+          <li><a href="#experience"><span class="num">02.</span> Experience</a></li>
+          <li><a href="#projects"><span class="num">03.</span> Projects</a></li>
+          <li><a href="#skills"><span class="num">04.</span> Skills</a></li>
+          <li><a href="#contact"><span class="num">05.</span> Contact</a></li>
+        </ol>
+      </nav>
     </header>
 
+    <!-- HERO -->
+    <main class="hero">
+      <p class="eyebrow">Hi, my name is</p>
 
-  <div class="container">
-    <div class="left-section">
-      <h1>Hello,<br>This is <span class="pink">BHARATHI PANDURANGAN</span>, I'm a<br>Professional <span class="green">Software<br>Developer.</span></h1>
+      <h1 class="title">
+        <span class="title__strong">Bharathi Pandurangan.</span>
+        <span class="title__soft">I build things for the web.</span>
+      </h1>
 
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <!-- <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fas fa-sync-alt"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a> -->
+      <p class="blurb">
+        Graduate Software Engineering student at RIT with experience in C++, Java, and Python.
+        Internship experience in C++, .NET, REST APIs, DevOps, and Terraform.
+        Built scalable systems with Kafka, Docker, and SQL in Agile environments.
+        Interested in backend, systems, and network-focused roles.
+      </p>
+
+      <a href="assets/resume.pdf" class="btn btn--cta">Check out my Resume</a>
+
+      <div class="social-center">
+        <ul>
+          <li><a href="https://github.com/Bp6191" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/bharathipandurangan-bp6191/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
       </div>
 
-      <div class="buttons">
-        <a href="#" class="btn contact"><i class="fas fa-user"></i> CONTACT ME</a>
-        <a href="assets/resume.pdf" class="btn resume"><i class="fas fa-download"></i> GET RESUME</a>
+      <div class="contact-info">
+        <p class="contact-label">Contact Me</p>
+        <a class="email" href="mailto:bp6191@rit.edu">bp6191@rit.edu</a>
       </div>
-    </div>
+    </main>
 
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section__headline">
+        <span class="rule"></span><span class="pill">About</span><span class="rule"></span>
+      </div>
 
-    <div class="right-section">
-        <img src = "assets/images/Image.png" alt = "Bharathi" class = "profile-image"/>
-    </div>
+      <div class="about__content">
+        <p>
+          I’m Bharathi — a Graduate Software Engineering student at RIT who enjoys building fast, reliable systems.
+          I work mostly in <strong>C++</strong> and <strong>Java</strong>, and jump across the stack when the problem is interesting.
+          Lately I’ve been focused on low-latency I/O, resilient services, and tidy CI that never surprises you.
+        </p>
+        <p>
+          I’ve shipped production code across internships and projects, working with <strong>Kafka</strong>,
+          <strong>Docker</strong>, and <strong>SQL</strong> in Agile teams. I like pragmatic engineering:
+          fewer moving parts, tighter feedback loops, and good logs.
+        </p>
+
+        <div class="mini-facts">
+          <span class="badge">RIT · GPA 3.78</span>
+          <span class="badge">Open to Backend / Systems roles</span>
+          <span class="badge">📍 Rochester, NY</span>
+        </div>
+      </div>
+    </section>
+<section id="experience" class="section">
+  <div class="section__headline">
+    <span class="rule"></span><span class="pill">Experience</span><span class="rule"></span>
   </div>
-<!-- <div class="code-card">
-<code>
-<span class="keyword">const</span> <span class="property">developer</span> = &#123;<br>
-&nbsp;&nbsp;<span class="property">name</span>: <span class="string">'Bharathi Pandurangan'</span>,<br>
-&nbsp;&nbsp;<span class="property">location</span>: <span class="string">'Rochester, NY'</span>,<br>
-&nbsp;&nbsp;<span class="property">education</span>: <span class="string">'MS in Software Engineering @ RIT'</span>,<br>
-&nbsp;&nbsp;<span class="property">skills</span>: [<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'C++'</span>, <span class="string">'Golang'</span>, <span class="string">'Java'</span>,  <span class="string">'Python'</span>, <span class="string">'React'</span>,<span class="string">'Spring Boot'</span>, <br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Docker'</span>, <span class="string">'Kubernetes'</span>, <span class="string">'Kafka'</span>, <span class="string">'MongoDB'</span>, <span class="string">'AWS'</span>, <br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Azure'</span>&nbsp;&nbsp;],<br>
-&nbsp;&nbsp;<span class="property">hardWorker</span>: <span class="value">true</span>,<br>
-&nbsp;&nbsp;<span class="property">quickLearner</span>: <span class="value">true</span>,<br>
-&nbsp;&nbsp;<span class="property">problemSolver</span>: <span class="value">true</span>,<br>
-&nbsp;&nbsp;<span class="function">hireable</span>: <span class="keyword">function</span>() &#123;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> (<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">this</span>.<span class="property">hardWorker</span> <span class="operator">&&</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">this</span>.<span class="property">problemSolver</span> <span class="operator">&&</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">this</span>.<span class="property">skills</span>.<span class="property">length</span> <span class="operator">>=</span> <span class="value">5</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;);<br>
-&nbsp;&nbsp;&#125;<br>
-&#125;
-</code>
-      </div> -->
+
+  <ol class="xp-timeline">
+    <!-- Example Item -->
+    <li class="xp-item" data-company="Tracsis Rail Technology Solutions">
+      <div class="xp-dot"></div>
+      <article class="xp-card">
+        <header class="xp-head">
+          <div class="xp-left">
+            <h3 class="xp-role">Software Developer — Co-op</h3>
+            <div class="xp-company">@ Tracsis Rail Technology Solutions</div>
+          </div>
+          <div class="xp-right">
+            <span class="xp-time">Jan 2025 — May 2025 · Fairport, NY</span>
+          </div>
+        </header>
+
+        <div class="xp-tech">
+          <span class="chip"><i class="devicon-cplusplus-plain"></i>C++</span>
+          <span class="chip"><i class="devicon-csharp-plain"></i>C#/.NET</span>
+          <span class="chip"><i class="devicon-azure-plain"></i>Azure</span>
+          <span class="chip"><i class="devicon-rest-plain"></i>REST</span>
+          <span class="chip"><i class="devicon-perforce-plain"></i>P4V</span>
+        </div>
+
+        <div class="xp-stats">
+          <span class="stat">Prod features shipped</span>
+          <span class="stat">REST APIs designed</span>
+          <span class="stat">Agile sprints delivered</span>
+        </div>
+
+        <div class="xp-desc">
+          <ul class="job__points">
+            <li>Contributed to dispatching/monitoring products using <strong>C++</strong>, <strong>C#</strong>, <strong>.NET</strong>, Perforce, Xamarin in Agile.</li>
+            <li>Designed and implemented <strong>REST APIs</strong>; collaborated on <strong>Azure</strong> cloud + analytics features.</li>
+            <li>Participated in standups & sprint planning with JIRA; shipped incremental features reliably.</li>
+          </ul>
+        </div>
+      </article>
+    </li>
+  </ol>
+</section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section__headline">
+        <span class="rule"></span><span class="pill">Projects</span><span class="rule"></span>
+      </div>
+
+      <div class="projects">
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Highly Fault-Tolerant Tweet Analyzer</h3>
+            <div class="card__meta">C++, Kafka, gRPC, Boost, SQLite, Docker, Kubernetes</div>
+          </div>
+          <p class="card__body">
+            Multithreaded Kafka consumer + gRPC service for real-time sentiment analysis.
+            Replicated topics (3 brokers) to avoid data loss; ~30% lower latency via batched processing; ~85% accuracy with VADER.
+          </p>
+          <ul class="card__list">
+            <li>Throughput ↑ 40% with parallel processing.</li>
+            <li>SQLite f or persisted analytics; CI via Jenkins; debugged with GDB.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Price Comparison Plus (Desktop)</h3>
+            <div class="card__meta">C++, JavaScript (UI), REST, CMake, Kafka, SQLite</div>
+          </div>
+          <p class="card__body">
+            Modular desktop app with SSO and RESTful module comms; Kafka for queuing; 97% coverage with GoogleTest, Codecov, SonarQube.
+          </p>
+          <ul class="card__list">
+            <li>CI/CD for builds/tests/releases; SQLite for local state.</li>
+            <li>Agile collaboration across the team.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">HTTP Proxy + Market Relay</h3>
+            <div class="card__meta">C++, HTTP, LRU Cache, Conditional GET, DNS</div>
+          </div>
+          <p class="card__body">
+            HTTP proxy with Conditional GET + Last-Modified and a DNS-aware relay tuned for high throughput.
+          </p>
+          <ul class="card__list">
+            <li>Reduced response latency ~35% via smarter caching and async routing.</li>
+            <li>LRU eviction and bandwidth-aware updates.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+<!-- =======================
+     Skills — Panel Style
+     ======================= -->
+<section id="skills" class="section">
+  <div class="section__headline">
+    <span class="rule"></span><span class="pill">Skills</span><span class="rule"></span>
+  </div>
+
+  <div class="skills-grid">
+
+    <!-- Programming Languages -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">Programming Languages</h3>
+      <div class="tags">
+        <a class="tag"><i class="devicon-cplusplus-plain colored"></i><span>C/C++</span></a>
+        <a class="tag"><i class="devicon-c-plain colored"></i><span>C</span></a>
+        <a class="tag"><i class="devicon-java-plain colored"></i><span>Java</span></a>
+        <a class="tag"><i class="devicon-csharp-plain colored"></i><span>C#</span></a>
+        <a class="tag"><i class="devicon-go-plain colored"></i><span>Go</span></a>
+        <a class="tag"><i class="devicon-rust-plain colored"></i><span>Rust</span></a>
+        <a class="tag"><i class="devicon-python-plain colored"></i><span>Python</span></a>
+        <a class="tag"><i class="devicon-bash-plain colored"></i><span>Bash</span></a>
+        <a class="tag"><i class="devicon-matlab-plain colored"></i><span>MATLAB</span></a>
+        <a class="tag"><i class="devicon-perl-plain colored"></i><span>Perl</span></a>
+        <a class="tag"><i class="devicon-javascript-plain colored"></i><span>JavaScript (ES6+)</span></a>
+        <a class="tag"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></a>
+        <a class="tag"><i class="devicon-html5-plain colored"></i><span>HTML5</span></a>
+        <a class="tag"><i class="devicon-css3-plain colored"></i><span>CSS</span></a>
+        <a class="tag"><i class="fa-solid fa-code"></i><span>XML</span></a>
+      </div>
+    </article>
+
+    <!-- Frontend -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">Frontend</h3>
+      <div class="tags">
+        <a class="tag"><i class="devicon-react-original colored"></i><span>React</span></a>
+        <a class="tag"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></a>
+        <a class="tag"><i class="devicon-react-original colored"></i><span>React Native</span></a>
+        <a class="tag"><i class="devicon-html5-plain colored"></i><span>HTML</span></a>
+        <a class="tag"><i class="devicon-css3-plain colored"></i><span>CSS</span></a>
+        <!-- add Tailwind/Next if you use them -->
+      </div>
+    </article>
+
+    <!-- Backend -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">Backend</h3>
+      <div class="tags">
+        <a class="tag"><i class="devicon-spring-plain colored"></i><span>Spring Boot</span></a>
+        <a class="tag"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></a>
+        <a class="tag"><i class="devicon-express-original colored"></i><span>Express</span></a>
+        <a class="tag"><i class="devicon-hibernate-plain colored"></i><span>Hibernate</span></a>
+        <a class="tag"><i class="devicon-grpc-plain colored"></i><span>gRPC</span></a>
+        <a class="tag"><i class="fa-solid fa-plug"></i><span>REST APIs</span></a>
+      </div>
+    </article>
+
+    <!-- Databases -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">Databases</h3>
+      <div class="tags">
+        <a class="tag"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></a>
+        <a class="tag"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></a>
+        <a class="tag"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></a>
+        <a class="tag"><i class="devicon-sqlite-plain colored"></i><span>SQLite</span></a>
+        <a class="tag"><i class="devicon-oracle-original colored"></i><span>Oracle</span></a>
+        <a class="tag"><i class="devicon-amazonwebservices-plain colored"></i><span>AWS RDS</span></a>
+      </div>
+    </article>
+
+    <!-- DevOps & Cloud -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">DevOps & Cloud</h3>
+      <div class="tags">
+        <a class="tag"><i class="devicon-amazonwebservices-plain colored"></i><span>AWS</span></a>
+        <a class="tag"><i class="devicon-azure-plain colored"></i><span>Azure</span></a>
+        <a class="tag"><i class="devicon-docker-plain colored"></i><span>Docker</span></a>
+        <a class="tag"><i class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></a>
+        <a class="tag"><i class="devicon-terraform-plain colored"></i><span>Terraform</span></a>
+        <a class="tag"><i class="devicon-jenkins-plain colored"></i><span>Jenkins</span></a>
+        <a class="tag"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></a>
+        <a class="tag"><i class="devicon-apachekafka-plain colored"></i><span>Kafka</span></a>
+        <a class="tag"><i class="devicon-hadoop-plain colored"></i><span>Hadoop</span></a>
+        <a class="tag"><i class="devicon-helm-plain colored"></i><span>Helm</span></a>
+        <a class="tag"><i class="fa-solid fa-box-archive"></i><span>Docker Compose</span></a>
+        <a class="tag"><i class="fa-solid fa-diagram-project"></i><span>CI/CD</span></a>
+        <a class="tag"><i class="fa-solid fa-code-branch"></i><span>IaC</span></a>
+      </div>
+    </article>
+
+    <!-- Testing & Automation -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">Testing & Automation</h3>
+      <div class="tags">
+        <a class="tag"><i class="fa-solid fa-vial"></i><span>JUnit</span></a>
+        <a class="tag"><i class="fa-solid fa-vial"></i><span>Mockito</span></a>
+        <a class="tag"><i class="fa-solid fa-vial"></i><span>AssertJ</span></a>
+        <a class="tag"><i class="fa-solid fa-vial"></i><span>Pytest</span></a>
+        <a class="tag"><i class="fa-solid fa-vial"></i><span>Google Test</span></a>
+        <a class="tag"><i class="devicon-sonarqube-plain colored"></i><span>SonarQube</span></a>
+        <!-- <a class="tag"><i class="devicon-selenium-plain colored"></i><span>Selenium</span></a> -->
+      </div>
+    </article>
+
+    <!-- Security & Monitoring -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">Security & Monitoring</h3>
+      <div class="tags">
+        <a class="tag"><i class="fa-solid fa-shield-halved"></i><span>OAuth 2.0</span></a>
+        <a class="tag"><i class="fa-solid fa-key"></i><span>JWT</span></a>
+        <a class="tag"><i class="fa-solid fa-user-lock"></i><span>RBAC</span></a>
+        <a class="tag"><i class="devicon-prometheus-plain colored"></i><span>Prometheus</span></a>
+        <a class="tag"><i class="devicon-grafana-plain colored"></i><span>Grafana</span></a>
+        <a class="tag"><i class="devicon-swagger-plain colored"></i><span>Swagger / OpenAPI</span></a>
+        <a class="tag"><i class="fa-solid fa-bug"></i><span>GDB</span></a>
+      </div>
+    </article>
+
+    <!-- OS & Networking -->
+    <article class="skills-panel">
+      <h3 class="skills-panel__title">OS & Networking</h3>
+      <div class="tags">
+        <a class="tag"><i class="devicon-windows8-original colored"></i><span>Windows</span></a>
+        <a class="tag"><i class="devicon-ubuntu-plain colored"></i><span>Ubuntu</span></a>
+        <a class="tag"><i class="fa-solid fa-right-left"></i><span>HTTP</span></a>
+        <a class="tag"><i class="fa-solid fa-network-wired"></i><span>TCP/IP</span></a>
+        <a class="tag"><i class="fa-solid fa-globe"></i><span>DNS</span></a>
+        <a class="tag"><i class="fa-solid fa-shield"></i><span>TLS</span></a>
+        <a class="tag"><i class="fa-solid fa-repeat"></i><span>Proxy Servers</span></a>
+        <a class="tag"><i class="fa-solid fa-arrow-rotate-right"></i><span>Conditional GET</span></a>
+      </div>
+    </article>
+
+  </div>
+</section>
 
 
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section__headline">
+        <span class="rule"></span><span class="pill">Contact</span><span class="rule"></span>
+      </div>
+
+      <div class="contact__wrap">
+        <p>
+          Always happy to chat about backend, systems, networks, or just clean code.
+          If you’re building something performance-sensitive (or want calmer CI), I’d love to help.
+        </p>
+
+        <div class="contact__cta">
+          <a class="btn btn--cta" href="mailto:bp6191@rit.edu">Say hello</a>
+          <div class="contact__meta">
+            <span class="badge">📍 Rochester, NY</span>
+            <span class="badge">📞 (302) 300-9349</span>
+            <a class="badge link" href="https://github.com/Bp6191" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="badge link" href="https://www.linkedin.com/in/bharathipandurangan-bp6191/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Auto-scroll JS -->
+  <script>
+  (() => {
+    const SPEED = 0.7;       // px per frame
+    const STEP_CLICK = 260;  // arrow click distance
+    const scrollers = [...document.querySelectorAll('.skill-scroller')];
+
+    const updateScrollableFlag = (wrap) => {
+      const row = wrap.querySelector('.skill-row');
+      const scrollable = row.scrollWidth > row.clientWidth + 2;
+      wrap.dataset.scrollable = scrollable ? "true" : "false";
+    };
+
+    scrollers.forEach(wrap => {
+      const row = wrap.querySelector('.skill-row');
+      let raf, active = false, paused = false, dir = 1;
+
+      new ResizeObserver(() => updateScrollableFlag(wrap)).observe(row);
+      updateScrollableFlag(wrap);
+
+      wrap.querySelector('.left').addEventListener('click', () => {
+        row.scrollBy({ left: -STEP_CLICK, behavior: 'smooth' });
+      });
+      wrap.querySelector('.right').addEventListener('click', () => {
+        row.scrollBy({ left: STEP_CLICK, behavior: 'smooth' });
+      });
+
+      ['mouseenter','touchstart','pointerdown','wheel','keydown'].forEach(ev =>
+        row.addEventListener(ev, () => paused = true, { passive: true })
+      );
+      ['mouseleave','pointerup','touchend','blur'].forEach(ev =>
+        row.addEventListener(ev, () => paused = false, { passive: true })
+      );
+
+      const tick = () => {
+        if (!active || paused) { raf = requestAnimationFrame(tick); return; }
+        if (row.scrollLeft <= 0) dir = 1;
+        const max = row.scrollWidth - row.clientWidth;
+        if (row.scrollLeft >= max - 1) dir = -1;
+        row.scrollLeft += SPEED * dir;
+        raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+
+      const io = new IntersectionObserver(([entry]) => {
+        active = entry.isIntersecting && entry.intersectionRatio > 0.35;
+      }, { threshold: [0, .35, 1] });
+      io.observe(wrap);
+
+      window.addEventListener('beforeunload', () => cancelAnimationFrame(raf));
+    });
+  })();
+  </script>
 </body>
 </html>
